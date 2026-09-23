@@ -1,0 +1,25 @@
+{
+  "name": "edgecase-theatre",
+  "version": "0.1.0",
+  "description": "Put a component on stage and audition the data that usually breaks it.",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/REllwood/edgecase-theatre.git"
+  },
+  "homepage": "https://github.com/REllwood/edgecase-theatre#readme",
+  "bugs": {
+    "url": "https://github.com/REllwood/edgecase-theatre/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "check:syntax": "node --check src/case-engine.js && node --check src/check-scenes.js && node --check src/server.js && node --check public/app.js",
+    "check": "npm test && npm run check:syntax && node src/check-scenes.js examples/flight-status.scene.json"
+  }
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edgecase Theatre workbench</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="workbench-header">
+      <div>
+        <p class="kicker">Component resilience workbench</p>
+        <h1>Edgecase Theatre</h1>
+      </div>
+      <p id="scene-summary" aria-live="polite">Loading: Reading the demonstration scene</p>
+    </header>
+
+    <main>
+      <aside class="control-rail" aria-labelledby="control-heading">
+        <div class="rail-heading">
+          <p class="sequence">Scene 01</p>
+          <h2 id="control-heading">Flight status card</h2>
+        </div>
+
+        <form id="matrix-form">
+          <fieldset>
+            <legend>Named fixtures</legend>
+            <div id="fixture-list" class="fixture-list">
+              <p>Loading: Preparing hostile fixtures</p>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Stage dimensions</legend>
+            <label for="viewport">Viewport</label>
+            <select id="viewport">
+              <option value="compact">Compact, 280 px</option>
+              <option value="wide">Wide, 480 px</option>
+              <option value="both">Both viewports</option>
+            </select>
+
+            <label for="theme">Colour scheme</label>
+            <select id="theme">
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+              <option value="both">Both schemes</option>
+            </select>
+
+            <label for="direction">Text direction</label>
+            <select id="direction">
+              <option value="ltr">Left to right</option>
+              <option value="rtl">Right to left</option>
+              <option value="both">Both directions</option>
+            </select>
+          </fieldset>
+
+          <p id="cost-estimate" class="cost-estimate">Select fixtures to calculate the frame count.</p>
+
+          <div class="button-row">
+            <button id="render-button" type="submit">Render matrix</button>
+            <button id="cancel-button" class="secondary" type="button" disabled>Cancel rendering</button>
+          </div>
+        </form>
+
+        <div id="progress" class="progress" role="status" aria-live="polite">Waiting for the scene.</div>
+
+        <button id="export-button" class="export-button secondary" type="button">Prepare fixture export</button>
+        <label for="fixture-export">Selected scene JSON</label>
+        <textarea id="fixture-export" rows="7" readonly></textarea>
+      </aside>
+
+      <section class="contact-sheet" aria-labelledby="sheet-heading">
+        <header class="sheet-heading">
+          <div>
+            <p class="sequence">Contact sheet</p>
+            <h2 id="sheet-heading">Resilience frames</h2>
+          </div>
+          <label class="warning-filter">
+            <input id="warnings-only" type="checkbox">
+            Show findings only
+          </label>
+        </header>
+        <div id="frame-list" class="frame-list">
+          <p class="empty-state">The matrix will appear progressively after rendering begins.</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

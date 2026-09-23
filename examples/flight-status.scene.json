@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "id": "flight-status",
+  "name": "Flight status card",
+  "seed": "southern-cross-42",
+  "schema": {
+    "airline": { "type": "string", "required": true },
+    "logoUrl": { "type": "url", "required": false },
+    "origin": { "type": "string", "required": true },
+    "destination": { "type": "string", "required": true },
+    "status": { "type": "string", "required": true },
+    "gate": { "type": "optional", "required": false },
+    "delayMinutes": { "type": "number", "required": true },
+    "departureAt": { "type": "date", "required": true },
+    "updates": { "type": "list", "required": true }
+  },
+  "baseProps": {
+    "airline": "Southern Air",
+    "logoUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect width='48' height='48' fill='%231b4d48'/%3E%3Cpath d='M8 26h32L24 12z' fill='white'/%3E%3C/svg%3E",
+    "origin": "Melbourne",
+    "destination": "Hobart",
+    "status": "On time",
+    "gate": "Gate 12",
+    "delayMinutes": 0,
+    "departureAt": "2026-08-04T08:20:00.000Z",
+    "updates": ["Boarding 07:50", "Doors close 08:10"]
+  },
+  "fixtures": [
+    {
+      "id": "missing-logo",
+      "name": "Missing airline logo",
+      "props": { "logoUrl": null }
+    },
+    {
+      "id": "long-airport",
+      "name": "Thirty-character airport name",
+      "props": { "destination": "Llanfairpwllgwyngyll Airport" }
+    },
+    {
+      "id": "cancelled",
+      "name": "Cancelled with zero delay",
+      "props": { "status": "Cancelled", "delayMinutes": 0, "gate": null }
+    },
+    {
+      "id": "arabic-route",
+      "name": "Arabic route and right-to-left text",
+      "props": { "origin": "ملبورن", "destination": "هوبارت", "status": "في الموعد" }
+    }
+  ]
+}
