@@ -6,11 +6,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/REllwood/EdgecaseTheatre.git"
+    "url": "git+https://github.com/REllwood/Edgecase-Theatre.git"
   },
-  "homepage": "https://github.com/REllwood/EdgecaseTheatre#readme",
+  "homepage": "https://github.com/REllwood/Edgecase-Theatre#readme",
   "bugs": {
-    "url": "https://github.com/REllwood/EdgecaseTheatre/issues"
+    "url": "https://github.com/REllwood/Edgecase-Theatre/issues"
   },
   "type": "module",
   "engines": {

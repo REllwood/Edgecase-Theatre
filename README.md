@@ -26,8 +26,8 @@ Components get built with tidy sample data. Then production sends a missing logo
 Requires Node.js 22 or newer. No `npm install` needed.
 
 ```sh
-git clone https://github.com/REllwood/EdgecaseTheatre.git
-cd EdgecaseTheatre
+git clone https://github.com/REllwood/Edgecase-Theatre.git
+cd Edgecase-Theatre
 npm start
 ```
 
